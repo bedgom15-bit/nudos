@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialidad de Nudos Guías Mayores</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            50: '#f2f7f4',
+                            100: '#e1ede6',
+                            200: '#c5dcce',
+                            300: '#9dc2ad',
+                            400: '#6ea386',
+                            500: '#4b8567',
+                            600: '#386a51',
+                            700: '#2e5542',
+                            800: '#274537',
+                            900: '#21392e',
+                        },
+                        earth: {
+                            100: '#f6f4ee',
+                            200: '#e8e2d3',
+                            500: '#a38f78',
+                            800: '#524536',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .checkbox-anim {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .checkbox-anim:checked {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-stone-100 text-stone-800 min-h-screen font-sans antialiased flex flex-col">
+
+    <!-- Header / Navbar -->
+    <header class="bg-forest-900 text-stone-100 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <img src="data:image/webp;base64,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" alt="Insignia Especialidad de Nudos" class="h-12 w-auto drop-shadow-md">
+                <div>
+                    <h1 class="font-heading font-bold text-xl sm:text-2xl text-stone-100 leading-tight">Especialidad de Nudos</h1>
+                    <p class="font-heading font-semibold text-sm sm:text-base text-forest-300 leading-tight">Guías Mayores</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <button id="btn-reset" onclick="confirmReset()" class="text-xs sm:text-sm bg-forest-800 hover:bg-rose-900 text-rose-200 hover:text-white px-3 py-2 rounded-lg border border-forest-700 hover:border-rose-700 transition duration-200 flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <span>Reiniciar Progreso</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-6 flex-grow w-full">
+
+        <!-- Progreso General (FIJO ARRIBA) -->
+        <div class="sticky top-0 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 pt-3 pb-3 mb-4 bg-stone-100/95 backdrop-blur">
+            <div class="bg-white rounded-2xl p-3 sm:p-4 shadow-md border border-stone-200/80">
+                <div class="flex items-center justify-between gap-3 mb-2">
+                    <div class="min-w-0">
+                        <span class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-forest-600 bg-forest-50 px-2 py-0.5 rounded-md border border-forest-100">Progreso General</span>
+                        <h2 class="text-base sm:text-xl font-heading font-bold text-stone-800 mt-1 truncate" id="progress-status-text">0 de 30 Completados</h2>
+                    </div>
+                    <div class="text-2xl sm:text-3xl font-heading font-extrabold text-forest-700" id="progress-percentage">0%</div>
+                </div>
+
+                <!-- Barra de progreso -->
+                <div class="w-full bg-stone-200 h-3 rounded-full overflow-hidden p-0.5 shadow-inner">
+                    <div id="progress-bar" class="bg-gradient-to-r from-forest-500 to-forest-700 h-full rounded-full transition-all duration-500 ease-out w-0"></div>
+                </div>
+
+                <!-- Estadísticas por sección -->
+                <div class="grid grid-cols-3 gap-2 mt-3 text-center text-xs sm:text-sm">
+                    <div class="bg-stone-50 rounded-lg py-1.5 px-1 border border-stone-100">
+                        <span class="text-stone-500 block text-[10px] sm:text-xs font-medium">20 Nudos</span>
+                        <span id="stat-nudos" class="font-bold text-stone-800">0/20</span>
+                    </div>
+                    <div class="bg-stone-50 rounded-lg py-1.5 px-1 border border-stone-100">
+                        <span class="text-stone-500 block text-[10px] sm:text-xs font-medium">5 Amarres</span>
+                        <span id="stat-amarres" class="font-bold text-stone-800">0/5</span>
+                    </div>
+                    <div class="bg-stone-50 rounded-lg py-1.5 px-1 border border-stone-100">
+                        <span class="text-stone-500 block text-[10px] sm:text-xs font-medium">5 As de Guía</span>
+                        <span id="stat-asdeguia" class="font-bold text-stone-800">0/5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls Bar: Search & Category Filters -->
+        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-6">
+
+            <!-- Search Bar -->
+            <div class="relative flex-1">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400"></i>
+                <input type="text" id="search-input" oninput="filterItems()" placeholder="Buscar nudo o amarre por nombre..." class="w-full pl-10 pr-4 py-2.5 bg-white border border-stone-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-forest-500 transition shadow-sm placeholder:text-stone-400">
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex items-center gap-1 overflow-x-auto custom-scrollbar pb-1 lg:pb-0">
+                <button onclick="setCategoryFilter('all')" id="cat-all" class="cat-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition bg-forest-800 text-white shadow-sm">Todos</button>
+                <button onclick="setCategoryFilter('nudos')" id="cat-nudos" class="cat-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition bg-white text-stone-600 hover:bg-stone-200/60 border border-stone-200">20 Nudos</button>
+                <button onclick="setCategoryFilter('amarres')" id="cat-amarres" class="cat-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition bg-white text-stone-600 hover:bg-stone-200/60 border border-stone-200">5 Amarres</button>
+                <button onclick="setCategoryFilter('asdeguia')" id="cat-asdeguia" class="cat-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition bg-white text-stone-600 hover:bg-stone-200/60 border border-stone-200">5 As de Guía</button>
+            </div>
+
+            <!-- Status Filter Tabs -->
+            <div class="flex items-center gap-1 bg-stone-200/70 p-1 rounded-xl self-start lg:self-auto border border-stone-200">
+                <button onclick="setStatusFilter('all')" id="status-all" class="status-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-white text-stone-800 shadow-sm">Todos</button>
+                <button onclick="setStatusFilter('pending')" id="status-pending" class="status-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition text-stone-600 hover:text-stone-900">Pendientes</button>
+                <button onclick="setStatusFilter('completed')" id="status-completed" class="status-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition text-stone-600 hover:text-stone-900">Completados</button>
+            </div>
+
+        </div>
+
+        <!-- Checklist Item Container -->
+        <div id="checklist-container" class="space-y-8">
+            <!-- Dynamically populated via JS -->
+        </div>
+
+        <!-- Empty Search State -->
+        <div id="empty-state" class="hidden text-center py-12 bg-white rounded-2xl border border-dashed border-stone-300">
+            <i class="fa-solid fa-compass text-4xl text-stone-300 mb-3"></i>
+            <h3 class="font-heading text-lg font-bold text-stone-700">No se encontraron resultados</h3>
+            <p class="text-sm text-stone-500 mt-1">Intenta con otro término de búsqueda o cambia los filtros seleccionados.</p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-200/60 border-t border-stone-300 py-6 mt-12 text-center text-xs text-stone-500">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p>© Checklist Interactivo de Cabuyería - Guía de aprendizaje táctico y scout.</p>
+            <div class="flex items-center gap-4 text-stone-600">
+                <span><img src="data:image/webp;base64,UklGRtAfAABXRUJQVlA4WAoAAAAQAAAAnwAAhAAAQUxQSMIGAAABoEVtmyFJ+iL+GBtr27Zt27Zt27Zt27Zt2xx3/P//XXS1qjLjOiImAK0bJKWAhgOnnnvJ1bfe+8hTzr7wkksuOvuUo/bZeo0l55l6EBoGSRJQt0ESAISBc25w6GWPvPb57+PY5XF/fPH6Y5cftuHcAwMAJAn1EUQAYOA8G5/y6PdtbOymWTuZ1ZyN23547LRN5h0MAElCHcReAMIM2179xj9sb5pVzZ1ddjfVrMb2/7517fYzRgC9YsXFBKD/Yoc/P5okNauzCd2ykuSYF49cYgCAFKsrJiAsdPJrmaRldTaxazaS+fXTFolAipUUUgBm2POFNtKzOVvQLRuZX95nZiCkUDkCYMkrfiSZ1dmyrpnkL9csGwCplCBA/w0fy2Q2trxlUp/adBAgoTIE6LvdqySzsRItk3xjp36AVINE9N3ybVKNFWqZfG/b/ojSeiEBa75EmrJiVclX1wVSaDEBZr/VmY0VbJl+19xAaqUg6H/0n3RlRavxn+MHQULLCLDsm6SywpV8dyVAWqQX+p82ntlZ6Z6Zzx2E1AohYv6X6cbKN+MbiyLGpovArn8zO2vQM//bG4hNJhh0GWmsSSOvHgppqoSZXqQaa9OVb8yGXk0kWOIbtrFW2/j9MkhN0wtr/sXMms38dwOkJknYro3G2jX6rkhNkbBLNmMNm/m+SE2QsDfNWcuuPASpx3phR1NjTbtyD6QeStjUzVjbptwWqUcEy48yZ427jVsN0gOCuX6msdaNvy8I6baAkR8ws+aVn06K0E0hyV3MrP3MB1MK3ZNwKDMLMPNYpG4RLJfVS4Cqq0K6IchEH1NZBvxy0hi7JriEykJUXgPpkmBVUxajch1IF2Ic9D5Lwj8ZHmPnBIdTWZCZJ0A6FcL0f5uXhNv/s4bYGcEVVBal8kZIJyTMP8q8LNzGLhKko4jrqCxM5e2IHQTMOc5ZnN42P2IjwcXM5ZF5NVKDGKb9ya08zH+bKcR2CXsxs0AzD0Zqh/SGW4kY3+8NADEsbs4ida6ACCScy1wmmZcgIYbB79LKxPjRsBAFS7W5l4mbrQhJOIyZhZp5PFLA49RSMb4QAyb6i14q5KgpgJXpLFbn2sDBzOWSeQxwQ9ncgV4vUsvF+Fq/qT6jlczX08//N71cnKMWXtG8YGhcYwsqCzZz5/3LRnnECaVzxlmlc/FFpXPNpaVz/UWlc81ZpXPxCaVz5gGlc8SWpbPTiu5eMMY15/+bBeMctchUn9PKxfjNDL1fopbM6/1xI3O5ZN4JHFY2xwKr0MvFuC4w8d/0YuGoKRHCk9RSMb4UkXAEc6lknoQkWCabl4mbrQyJYcj7tDIxfjICEQnnM5dJ5hUQIIalzcvEuXI7oNdbtBIxftQH7RP2ZS4R5WFI7WKY/me38nD/Y1bEdki4jLk8lNdD0DBinvFeHp4XRmyEiJuppaG8GwEdSlhojHlZuE1YHNIRBNdSy0J5KwSdjGGm/8xLwm30HIidgeAY5pLIPBWCTsc49CPXcjD/bKIYOwfBmiWh3BCCrgquopaC8iYIuhziJJ9Ty0D57eQxdg2ClbUUfC0IujPhaOYSyDwZCd0aUnqAuf4yn+idQvcgYNJPqHVn/GpKBHS3YIHfaPVm/GsxCLpfsOpY8zpznbA2EnoyYRua1Zcrd0ZCzybsQfW6cuWBSOjphIOpXk+uPBoJPZ+wr5nVkRkPRUIzJuzmtPoxcl+k0BRI2PBf5rrJHLU5Epo1Ydkf2FYvmb+shITmTZjjTarXh2e+Pw8Smlkw9FrS6sKcN42AoLkjsM//zF4HnjnmIEDQ7DFi8TdpVn2mfHdZxIgWTBh0vlK92jzTLx2KhNYUYJUPSK0yJT9ZExC0ahAMOfE/mlaVGkefNgIS0MIJmO9eUq2KLJMPLQwktHZIwAavk6pVY0q+tSmQAlpeIgbs8CGpViWWyU92HYwoqEQB+u/2NunZq8Gzk+/uNRAQVGUQYMiWzxuZrfWsjbSXtxkGSECVJiCufMPvJLN667hlkn/esloCUkDFhhSAWQ94Q0nL5q3glpXUtw+ZAwgpoIpjAmTJs98hScvmzeSWjSTfPW+ZBIigsmMCMGTZE14fT5JZzZvBTTNJTnjzpBWGAUgR1R4TgDjbbje9O4btTbOauXfN3UxzNrYf897Ne84hAFJEDQZJADBswa3PffZXZWPXLjsb6+/PX7DdQsMBQCSgNqMkAIjDFtzy2Oueeufbf5Rd1n+/fefp64/beuHhEQBEIuo2SJKAhsNmWGDZDXY59KRzLr76umuvueTckw/ddcNlF5xxOBpLkoDWBVZQOCDoGAAAkFUAnQEqoACFAD5JHItEIqGhGiw2bCgEhLEAaAhvqUNO3zvCtVt5pL73+l9SX6A9grnOeZ7zoNNx3lb93PS4zVX+V/g1+jvxg8TPxP5Efsz6s+Uv3X7mewTjj7LdTj5v+Cv3X9/9KO/X4yf43qEfj/82/1P9r9bb5rtzdy/3foEe231n/l/4b8gPTo/1PS/7NewB/Pv6//xvXL/eeH3+K/4nsA/0X/B/9X8wP8r9MH+B/8/9h5/f0j/Sf+7/WfAL/OP7F/x/8X+TXhP9F/9YXWy1P39Y0/bfF//33S/5puQRmkrQWxbN1AkRkR3cmchqmu7sn8WfksL2nhwfsGpZ0RYblq2oin1PUhxHYRof+Qvrj/+Qob+ZNXsB66FsK8BbQuvW4zTiKNGYCUH1Gkz6PFfgzAXjX8SQA73a5aUxoMu1e2w9nC6gOtpq3FRP98Sp3nPqjTSWpypAIq6CEFSXD/jhwNSUtaT6/WHht55xWRFovEi30YcYeMlcuhiSsPf8Ki3H7AA5f6QJrrUin5qgAdjCJ1hj17/N+2LUadz0AhRRTwX3ppNt5/AP8irNiqUZf64hewUopOV3HOWc07ugY4yXccgv32baVIOYXjJXzm+cVmx9e05Ana0gWWoUFETKDunkl4PkvaPhrxPzMjC9k+7TtdnA16BLA2Vg6st0CQmPVFA3/yP7bl6vkfGDxtY7QwY1AC3f3sTWS4JrgBKQ9RFtKErIf04OZVzo1wwfVQP6ovRuN5QDZlcMIC2VL1m8gEa2h5RnUF2YKP9UBCMR/AkmQ1hGu6nH3zqWVj65ne1Iv0eS5KL+wiUCMwJP8+tOh0efHItB/PaQpgUbTMRw4cJnxG9GF8klIpv/Pc/uzL7T5WuRO8M6faTZGGP5jPuiiyF62fI4VnRJ/9WAmDp2j96dlbAAAP7/DWbn6QJvCUnayvTUUOmzV+xwOo+6uRJXAbbyP7uWZgyUJEihu/YbYQw35xAZVmdH9/SrEqjLR+4g24QdCnlIEllSINssHYYsd4oc6B2jvOYGw/TQm4x8dQmLfLscXy/faTODXlvwHgIkKB06pk5BzNQvqeNbdwUBwOo1iwSP2sE2AjTdHrYQn/HAdHT6FYfbHA/4IZ9a+hT82lL/itVe6yop/7u8ZHdjGgrSbd4FaffX5keKc2Ly0OYAgFMzoWtZp8w4XCvXASm3oCI6UZoAJcYNqC156hR/OV19UC5A/ctgs8oPGPi0xKprvGh3e0M4jjqzJ5Pk3+2FSomA0AUJHJ8ubDS+woUzHYZhGj8HtRGFceRnQzM51wJ6yYRTSmHWktTpsjs44/h/zFkIHNObq+QmPbn3xtN9WXNw0+B5a22SNGUjYrjSdb41TomspBQ1zVwNf7FxrBLDyQIM+wJJ4F0OQdwr7xfyVIrfELDq2AiU29mZ2wxTZgQwiiXehjtj/dVLHTP0ikqLUnd9RdYrs5oyQ2Nyo2gnf26i/ugblS3KfpsYs2f71aNdIueS2yuU+Q0F05QlGJnlGaj84yx6xq2RjyVNeuCERZWE7JO8MV/30vSCx3EXzCxIErIMCMuiR/bzfu6lWtK6rTYw1TtWZiy56dGvJxQ2XbLYpvMy7GMY/7xZbSqtFwZU5+Ff6fadMV7Hwd00lzE+ZBCc2GlXAoufd2QYdVIiTergPtSmmqWSmL+1/TnY1CKm7g8x0aQW6Mbn4tM1GLxJdPPGNnlckW3kU6DubDwB5mH7M9j/8Yo9KNLGQB599vifxdjDYqVM9GePfdcZY/8NWr4V98GJuUGxP8iua/UU0RjmxjFEw9WxXnHKT5l5bN12ezpZEp+gyaK36fGSu57QS412BPVZMCHnXWsHIRTPgujBNg139Ajm6sP6BnSjQXOHeWB73LZc1woEIHv+thfBQ6T3H+v+IGBWqWISFStJXtjA5LuiTcDi5daNSzobfSROZ+JUG3tEFHl/UIEWkuo6FJR0VlXraVJ6ujeHDZWaHiy7WtmM35TIVwfDz/Ixb/TU0tMoU0uR0YXxhnqzIkLXljWSmJ8/O88NU0o+Valv4fgo5kxznePISqDCsAziOE/jL+c+mAw4r/06DVXYqcfCcML5j8Mnf8vwB8BtZ8PareedkttYn47MK0iJPGC8FUNBhk9KCcCheqwK2+8TFwuu42e1oDgrljy35jau/3MMK/hPhu0hHl5W1k2hWvRXREmNw2RXWauhjGELw0wSipwIPrH0Bav7vlXXPE+3kVt+gbtcH8mDtOCVqMIQHFbr8+LSBz/J7ES36kVcLOdnt0pdwQQUHh1JyzmJCY4xRsqdSgJXyYWfaF7SsfQSNDDfmk6UJrbHHiQILX25JoXgU43ofiTGhSH+KtY0oATI+ugPwQ3N0D20pmsJnRcALZ4yZ8eAGAtkMelfhhkY/f908YU1EmSmuboGA/IDa9fuW2e7sIfNhKbE/S0UgvF3gAsdIOUFftZuBdunn1PxmnvOB2hhH341XeCnUbIKTdmDw3/ARQFnO5hH9fazKLwowmveMYkCM4b+4ztf/y+5i2gUzp2yBYr8gLdBY67Zqw900XZt7TGgfn2k0qCMpzuvB6r/Hx0be9AiAY/tUkjVfOOVvKHOOR48ltr32L8T6X0tqr5shI5jw7Fl+/eskulaT7/bakDa5bLFsN+ZMUj9o/xcMaEGXmx0NPV3Y76XmC8FzSuwvsoKJU9ONi9f47a3EctuJM3N4NxzvvlWVvDT9Ur4uw45XfAtMjDCLjWFH1mOLvp19fWWJ/txw/PSf+axKDm/qPqhHolJzmAM6IE3DsESFFqgn9tXCVvUNrsuJNyrOnRoZfU2hVu7Gw6fxUcM9bY2x/1xUTdDUNUjUCn2X0/fIgBD7rHUiDUuFqLi/1GESQSiuOaqhI0WQLRPohozz2SgGbpnd6XyumFYFy3BCrAATdIs6rO9WoSTEOdziisPhs6kYWcQnf++FG1A3M6QI4UKCwjdfYZc1nctiXebpGT1zaQ3MDJ/MD6sVi280O66Yh9PpVDrtk132S3V5Qr/v8iWPxNJDSxLYSERv+Gr/x0nBaZUR6PWu7MCETbSj7KgZUvq5hIXGP891cAuBDsnwtSMZjN/Mmms/cezOGNrEtRv+CaeggKse4e9tQY6uy+bX9H9DSW5ZlYzXOb83CQ8r/5jQj3Eq/NtbahdJjRRIyMsnsi7rLS9FaerF6wc+8ZThXXO0zTFRwkVTgyPyyXz+DhlpGZu9hG50CiUDHKaJk4wiQJRwNI4ChQGlvT9bOTyxTqCc/ZIXOuRQ2QUC1PppiAOLxFElBLVRy5nkGKUTHQYfcw2Qq5kAjpIkXG96cWLBcAv8ol843tYGHPv1HI5nGzFFmjLqIEXeotg306vQOgNRPktoAkPmTj7VcsonPYH7H/sy5v4z6dCdFk6fTVSvGmd9UROLYmYxP9HQYMch9J1KOK8bDuYwpRHsy7QDzh6CtZlKwgK6/AIs29rT6IbZZwQ0otucyx4klnFYEuPjxn/OsDXaCwBfjMDwwvmixUc/YZck/owBM9Cm8cB/xHaP9SjKsSxxsQlt1Nyvy2i9AcxHykGYmSJxOSSN9BPe/hZHPMi9R4xq364YA6HuAqYdGuH+dwxmXfmvI/Ffp1zUM2YXbxLWar2TPLAk+yWDsTxadbfs2WcRr38XEJM3rnh7qWICcApqYP7cbJOLTvY3RAjuwShBX926PezGCujhrSzKffTkyBV3913AG6+ozchEO9tVAwNaBLSNXI+AyX3GfAT7T+c9/j8Ht8+oPwSUg8lWBOyHf4L21DYcIpcVh4VmBiV7yBwD+iNMjXChDfPMgciLvnMVbWo4REI4K+4T/5ViuwTMA66jMI96A2Zt4zVSbSEnoBWIDZZMf+l6p5n5HkTXj7uMeeULbjc+mkHF9vsySQTybJMuDPQDEtDy40YiQjXgRK4mNFk/OsZrk759fT971epkzpeYYKTCJolaQ8ab/SKinP4PrNYxsmNyk3eGm0yMBGxMk9nuMIRMvfDEyH1IvJv+lnmQImWffB6u8y8h1S5aZ5raOkXVgMYv6Kvk8lXVvAIHauTs+yp945rg1BbOQrZDr8Zx2FRrFZGdw/weL6r2xZVGnUSowZW6ZdOSaxz3eLtzmKQd8msZrHaPc1LSY168J10f9sbbJIo7hIPmnmS1nkIqTWDhwoUuIf3IMiRlrmEYTwjQ3XcY9V4fTIYUKBhonq0a3S4ShXiS+RocPuIJ0mrEA4lPFz1Q4VXjkvk6cgJ1Lktx9ie2dNSsI3BmocFCYrHDP0aAfZpnonm9YNimTciPMY93dnTVa4TNRAk20n90IUrF1ul7kP9KWiMu6UisarPSz7ET4CgM4fBdgsQHP5rXvw0RTwc1JkQD0+vESvtZF5Q6uzacQe3aZai6LlF5BaKZUfBPkW9sPuzhwgIvt+4gGiLNGf0hUwZMXJwcX6Aqp4DDgnu0YO2iYg3FNYimTniOllCsJ6zlBzStN0f6zC6asrTDZVbRMR9mb0PVpxqtfNevlZibqBECophLKlz2L6QgBLuxkWSEF4P58b3LxIYt/2WoHmi2Jauf21/05ckVR0lLGD7dcGUeyA6XCdu1iJN7Ud3WeuirKdyYjw8kCWgpmXbar4Z4nlqqZTXtGp6uQ/B9hFGq4p5spQGcJGKn0WmTq7QpomCgxpEfhecyaBWStzmLKWXHMZJGegEG7bAX1hoPNg+hWDDZ5N/3mS1d86+jnHSZ93IS6Gyov8YLceyi2TJq+Y3bKp350EJ/XfB+z6Op2GA5Y7V7ctrEye/WAPYRBdkGdRHNiLhNpXU3UIljjvd/WVHCCjZSaVr/3CieLqZhX5dLyHQjkISW8FmAmJnqXsVf9DzicQgDlRbNZkSxcrsnwd3N88/OS/Buypp8Q36pnBnwzPBCDbO73GJJL5WBekc76lR15io8s+Zz3ct0TityxFm76Eof9Pc5VmByb7VpNUFHMJvLOfcG4LumFDk+IbHySe7/hF8HqQHSOJJ7bGkyEux3GOoq1+eyRPRdwk+pH+4G+bZJkCLskSEcVgQDmkMmbYsSHeMOTbx7Zupix5wpi+pLdfCxoW0e4tPIv1pB8AzWklV4Y74wEuLrnfTth+eJ39RUSSQL0vWaDujRzFA60pwt4bLbZBXIFYiDdWyAMjrxbSDwVpNoe6kTzeanfHqAGxvC4kqn2/enqCWkz/xP5xBeTcAzarmpWltFLVtjWQQTpP5pZb3f67SMtpEm0owJECh0GcXJjE84soJpDJijV3FqRJrl5f0CczQ8Q0Glr1ToBC8a2D2OntooKvft8psx4Ib7E4DnKXBAL4ZuCh62RcMnXeLCPrNDk6dshL6Y6KyaKYWalJ6Tw19pxFUkGVxBd387Uzb6jmfOBce5tmNtDqkfriBW7pSuUPvA69Uja6u/3mM/UohDFmDcxcnEoa2KRm8ZXLGY5K0HgquCGWZYof0AM/ZINEqHaHqTiUi3nLdfeaRj3wuYkGJKfDaPyB/qY/UAnllRsvhhKzV2z/5tDcw57AUxivHmV1TLHlbChYKliz2CMeHxR7BvLv8eBJRzQxclDKPhtBir376JDBHau7hJK0bjJFgU0yHcn1N5b40OAyu6s3tbl+R0CKR/uuHtP8xhUfaagkZ9oVzijYfQG5/nuIwz/yzCcv034dRXQcYJgScZq9/9+DPgD7WPtxzWlo6dzwDle8FzZrvjS3rlwIthneGtmdXqJ4U1LtJ8HJQQa4iPl3VYPvw8qN74yWB+/Le2if/7GLk+b1vR2IHzu3GBSfdrcJVvlW5eexeoturK8XHrKqx0k0JuEZICNDCwxdPyA+SbV55d8YJ/oZugTHAutq5uSjuxivzJf4v8G7frjg2cXBJ7GNNWJ6Nc+pMgt9kqp5k/nhqtrgXopCzpO+e1G1eglM4neCp6e66KBuAy+JfD2TyHEH0DZys4EjliM2lx+ewbrfAhd91T7qIC7JRIrq3w/rKIg2z7BfACC3wV7ELTkZcsE+of5xN6Ba5p/ANt/kve3vboQTteKzHSosktOvMKDO3n4sbe54vOf+T3JF5wqS2ApP+faassh6JXucODnSZo9QegEWNXSfEYdL6uzS4CWwmaBBO1iGmZl5GkzxOxQp6+K8CD/8sRxOPs2w5/0QoQ9enJqhdcB6nSJKAzB5EwOIKxyouNShV3jHBObx3u1zudqXRUxm5Owr5Lbq9hYB9ldsLtJaIZMVj/ROKLa3TXE9H4jJGZfcIZElUui1x28EEHstNYtXEDUgr3DV694VE2aO4Qh9RJIUFR4k9XbNaEQNQFdbKmHlpsdIdQ6DT5ncjAgFj7CaY2idfFBa1flfL2cbI5t26EDDPoXT8ZNid7YQyLHNF0HrEprgRCJgSjoYfnk6GHHaSaCkN3+/25JS9S4b4eKsJiUWOPizMvTfvswWGZWeeyR3PHYksBiXluz5MWPpMa9pxJey+f6Fanf140NBTQGe1WUMxGckEFfGqlNQ5LeOTZiasfjuBPKDXQuofn8O76Zo4cZqKTS3GTNgO0ntj4FPwDVIJmcXfuABeolNLy9iMXk+Y3DJKavsOKNLY4N8nIPgjxaxSGbEYrTPoPoVD05y0QtGLqTVdw5fPQ+BQuFTCmJD5N2kiD2MxLdlQW8PMJuGcH42fVVR121gRcPaKHliKq+V6DxVPS+yX3Ggj2fgtI/3ZOpKHyZzrF9hEmL4ayYkHI9stFktIDF3BZHRLBA57r11k8d6ozCl3IZZdrd8LmFeUGw0cAWi3MRG8vqOaJPxUKSKU1EgNcMJTf5HmgzQRmlumhBinPZ3DBsosJsS1KUviTmmIzfdNeHtQC/VtDXUUCpjcxEKonIwaDMsV2DMXKDdht/EHBLjm5hUZi7GVWFl1FYrvOf1qJi0le100IMY+XK9IekuiD38eBrd0nrt46kLkH1Mb7qPIKj/IPqSnYikIhHz0ehdvAumAIKJ7FPOmn7mE3sM7BhdVeibXvIJZD1hbOQEvzssOJBR2KcVouQBbWJakCo2D90S9kU/Ge7NxOHgtNYWM+c/d7tdmd/XBa7nsaKl2uNd3JxDTM5Kk4U6rl88LPUMZCzt8ajj4rwOFKiXPOvfgzNtRZeVvH1cQXXoolt7P7K15+h5ZJxrD7IafddvMgWjJKUhU99pI1biUisFt/X11jcrJ9ryIwkipK/3/AJPVzrnqVysDjgwa06ZTt3kxqPTnMST4ivHapIysgqIRlEqZfrOUgj1On0PebGOEqGRLey8kzYshs7gEOpQiigRwDPownY+1urIMYksrrkmrN+i4gS13FjxcUVdP/z25f9pFXXJYjTDlFaOyd0NfqFfeqeSFiewJQ8FX88/1ScyG/0uozqTwAvZNgDEgIFp4znzwEz9eFPJz9x3J35B/K+v/qMG7+6I//aeTfZtzfCkzeRPLjO1Rf6OyGwxjL5uoUuhpidNbzgE4GCb07V1ThW/fHTRKspHsdA2jlEaGeh3o2r+EiChsUKuTfF6jDgOUbMgXHRAOEmJWcIUn7QdY2/HPpW8/acJsXCNfIaOwB7ZfeBVuyoFB8kzG6b83P53qr2JyO8S3X9kWnlWfbAC4uRJqb1RNOahtaI9UIHOZSJLjJkZPijTOj4K+Owor5t4jUGmcLbCGKoIiy8zu/f44tS8Vvh1kuKUI4YZoudh0WgDFHidiNjUme/6ZzCBXCn26wQGBMWy8hGqWpQ74XpJIhh9BLdNrsZR8AM6Byiykht6+JOVUfXsgAaE49mYzbwdn+UaDKb9qzER3wpDrUSM1/8iEG/ui87ZBok/wA93YWw1BhAmSXj+GLkRZUHyVSchOgXD9E6hjQzqFUO6nTTJLsb8WkX4V1UNaU8EHQo/IOj15XwJOk80Rupmcv0ZcoSC2AkexhJNDsVcDkz186ATMGNHJ7l0nAxHDH+KE2OEaofV515Wnr6B77c8z498hfK5gx0qfQ2Xj1itfUQTN+Mx1lAiWMMsrCeu5ufc6fTb+7Q0UxkGys1ntnhVlttCb2B46v7y6TkNGvDjRxM88Se9BO8r0kQJYhkejbVB67U0p1McMefTGGO/mLpXTyK/zDmeJJMQkml5CnVxk2GPdBvBRBn3Laje2AArDdiaeM117AaF/M7Qd9ggE/bkDdg/S8JdYzIGV/91dX9U0ZU3us0mO70QRWGicZx9L7taBQfpYlNWOVOG2COCXz/162XtCqT/0LcAABBr0GOfK5gqAUhaxtan9p+eqcoH6S5swuub8WvdnoKuo5KAC8c/x/ysMT00dO+VSdBv1KWC9o7PflUZLLZkVFGVE9W9mhpGPVOCbvhIbdofncVMD2Tv22NxLVyJ8NCbNbeoihbe/DLJsz0q2JuiuhU+ryVd3Jof9UgxbMcP8VjOzHyh99m7M1X1xtTnYgZEJpVfTU7UxcW7t8v77SE3WRP36o/w4iq0rDV/3fY8fBTmLbb7cqbiptv9IhrPWzmjWFEOEGxl1Pv+u////lU/+2z9o1I/e/LdhG/IAAAAAAA==" alt="" class="inline-block h-4 w-auto mr-1 align-text-bottom"> Aprende y Practica</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Confirm Reset Custom Dialog -->
+    <div id="reset-modal" class="fixed inset-0 bg-stone-900/60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl border border-stone-200 text-center">
+            <div class="w-12 h-12 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center mx-auto mb-4 text-xl">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-stone-800">¿Reiniciar todo el progreso?</h3>
+            <p class="text-sm text-stone-600 mt-2">Esta acción desmarcará todos los nudos y amarres completados. No podrás deshacer este cambio.</p>
+            <div class="flex gap-3 mt-6">
+                <button onclick="closeResetModal()" class="flex-1 py-2.5 bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium rounded-xl transition text-sm">Cancelar</button>
+                <button onclick="executeReset()" class="flex-1 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-medium rounded-xl transition text-sm shadow-sm">Sí, reiniciar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        // Cada elemento lleva en "q" la búsqueda exacta del nudo, para que el video siempre coincida.
+        // Si quieres un video específico, reemplaza el valor de "url" por el enlace de ese video.
+        const YT_SEARCH = 'https://www.youtube.com/results?search_query=';
+
+        const DATA = [
+            {
+                categoryKey: 'nudos',
+                categoryTitle: 'Sección 1: 20 Nudos',
+                categoryIcon: 'fa-certificate',
+                items: [
+                    { id: 'nudo-1',  num: '01', name: 'Nudo Simple',             q: 'nudo simple cabuyería cómo hacer' },
+                    { id: 'nudo-2',  num: '02', name: 'Estrangular',             q: 'nudo estrangular cabuyería cómo hacer' },
+                    { id: 'nudo-3',  num: '03', name: 'Falso',                   q: 'nudo falso cabuyería cómo hacer' },
+                    { id: 'nudo-4',  num: '04', name: 'Verdadero (Llano / Rizo)', q: 'nudo llano rizo cabuyería cómo hacer' },
+                    { id: 'nudo-5',  num: '05', name: 'Lazo Doble',              q: 'nudo lazo doble cabuyería cómo hacer' },
+                    { id: 'nudo-6',  num: '06', name: 'Lazo',                    q: 'nudo lazo cabuyería cómo hacer' },
+                    { id: 'nudo-7',  num: '07', name: 'Ballestrinque',           q: 'nudo ballestrinque cómo hacer' },
+                    { id: 'nudo-8',  num: '08', name: 'Margarita',               q: 'nudo margarita cabuyería cómo hacer' },
+                    { id: 'nudo-9',  num: '09', name: 'Vuelta de Brasa',         q: 'nudo vuelta de braza cabuyería cómo hacer' },
+                    { id: 'nudo-10', num: '10', name: 'Cirujano',                q: 'nudo cirujano cómo hacer' },
+                    { id: 'nudo-11', num: '11', name: 'Estibador',               q: 'nudo estibador cómo hacer' },
+                    { id: 'nudo-12', num: '12', name: 'Molinero',                q: 'nudo molinero cabuyería cómo hacer' },
+                    { id: 'nudo-13', num: '13', name: 'Constrictor',             q: 'nudo constrictor cómo hacer' },
+                    { id: 'nudo-14', num: '14', name: 'Vuelta de Escota',        q: 'nudo vuelta de escota cómo hacer' },
+                    { id: 'nudo-15', num: '15', name: 'Vuelta de Escota Doble',  q: 'nudo vuelta de escota doble cómo hacer' },
+                    { id: 'nudo-16', num: '16', name: 'Mariposa',                q: 'nudo mariposa cómo hacer' },
+                    { id: 'nudo-17', num: '17', name: 'Ocho',                    q: 'nudo ocho cómo hacer' },
+                    { id: 'nudo-18', num: '18', name: 'Arnés de Hombre',         q: 'nudo arnés de hombre cabuyería cómo hacer' },
+                    { id: 'nudo-19', num: '19', name: 'Boca de Lobo',            q: 'nudo boca de lobo cabuyería cómo hacer' },
+                    { id: 'nudo-20', num: '20', name: 'Pescador',                q: 'nudo pescador cómo hacer' }
+                ]
+            },
+            {
+                categoryKey: 'amarres',
+                categoryTitle: 'Sección 2: 5 Amarres',
+                categoryIcon: 'fa-campground',
+                items: [
+                    { id: 'amarre-1', num: '01', name: 'Amarre Cuadrado',           q: 'amarre cuadrado cabuyería cómo hacer' },
+                    { id: 'amarre-2', num: '02', name: 'Amarre Diagonal',           q: 'amarre diagonal cabuyería cómo hacer' },
+                    { id: 'amarre-3', num: '03', name: 'Amarre Redondo o Paralelo', q: 'amarre redondo paralelo cabuyería cómo hacer' },
+                    { id: 'amarre-4', num: '04', name: 'Amarre Continuo',           q: 'amarre continuo cabuyería cómo hacer' },
+                    { id: 'amarre-5', num: '05', name: 'Amarre con Forma de 8',     q: 'amarre en ocho cabuyería cómo hacer' }
+                ]
+            },
+            {
+                categoryKey: 'asdeguia',
+                categoryTitle: 'Sección 3: 5 Tipos de As de Guía',
+                categoryIcon: 'fa-dharmachakra',
+                items: [
+                    { id: 'asdeguia-1', num: '01', name: 'As de Guía Simple (Clásico)', q: 'as de guía simple nudo cómo hacer' },
+                    { id: 'asdeguia-2', num: '02', name: 'As de Guía Doble (por Seno)', q: 'as de guía doble por seno nudo cómo hacer' },
+                    { id: 'asdeguia-3', num: '03', name: 'As de Guía Español',          q: 'as de guía español nudo cómo hacer' },
+                    { id: 'asdeguia-4', num: '04', name: 'As de Guía Holandés',         q: 'as de guía holandés nudo cómo hacer' },
+                    { id: 'asdeguia-5', num: '05', name: 'As de Guía de Agua',          q: 'as de guía de agua nudo cómo hacer' }
+                ]
+            }
+        ];
+
+        // Genera el enlace de video a partir de la búsqueda (o usa "url" si se definió una)
+        DATA.forEach(sec => sec.items.forEach(item => {
+            item.videoUrl = item.url || (YT_SEARCH + encodeURIComponent(item.q));
+        }));
+
+        // APP STATE
+        let completedItems = {};
+        try {
+            completedItems = JSON.parse(localStorage.getItem('knots_checklist_completed')) || {};
+        } catch (e) {
+            completedItems = {};
+        }
+        let currentCategoryFilter = 'all'; // 'all', 'nudos', 'amarres', 'asdeguia'
+        let currentStatusFilter = 'all';   // 'all', 'pending', 'completed'
+        let searchQuery = '';
+
+        function saveState() {
+            try {
+                localStorage.setItem('knots_checklist_completed', JSON.stringify(completedItems));
+            } catch (e) {}
+        }
+
+        // INITIALIZATION
+        document.addEventListener('DOMContentLoaded', () => {
+            renderChecklist();
+            updateDashboard();
+        });
+
+        // RENDER CHECKLIST INTERFACE
+        function renderChecklist() {
+            const container = document.getElementById('checklist-container');
+            container.innerHTML = '';
+            let totalVisibleItems = 0;
+
+            DATA.forEach(section => {
+                if (currentCategoryFilter !== 'all' && currentCategoryFilter !== section.categoryKey) {
+                    return;
+                }
+
+                const filteredItems = section.items.filter(item => {
+                    const isCompleted = !!completedItems[item.id];
+
+                    if (currentStatusFilter === 'pending' && isCompleted) return false;
+                    if (currentStatusFilter === 'completed' && !isCompleted) return false;
+
+                    if (searchQuery.trim() !== '') {
+                        const nameMatch = item.name.toLowerCase().includes(searchQuery.toLowerCase());
+                        const numMatch = item.num.includes(searchQuery);
+                        return nameMatch || numMatch;
+                    }
+
+                    return true;
+                });
+
+                if (filteredItems.length === 0) return;
+
+                totalVisibleItems += filteredItems.length;
+
+                const sectionEl = document.createElement('div');
+                sectionEl.className = 'bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden';
+
+                const completedCountInSection = section.items.filter(i => completedItems[i.id]).length;
+                const totalInSection = section.items.length;
+
+                sectionEl.innerHTML = `
+                    <div class="bg-stone-50 px-5 py-4 border-b border-stone-200 flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid ${section.categoryIcon} text-forest-600 text-lg"></i>
+                            <h3 class="font-heading font-bold text-stone-800 text-lg">${section.categoryTitle}</h3>
+                        </div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-stone-200/80 text-stone-700">
+                            ${completedCountInSection} / ${totalInSection} completados
+                        </span>
+                    </div>
+                    <div class="p-3 sm:p-4 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                        ${filteredItems.map(item => createCardHTML(item)).join('')}
+                    </div>
+                `;
+
+                container.appendChild(sectionEl);
+            });
+
+            const emptyState = document.getElementById('empty-state');
+            if (totalVisibleItems === 0) {
+                emptyState.classList.remove('hidden');
+            } else {
+                emptyState.classList.add('hidden');
+            }
+        }
+
+        // GENERATE ITEM CARD HTML
+        function createCardHTML(item) {
+            const isChecked = !!completedItems[item.id];
+
+            return `
+                <div id="card-${item.id}" class="group relative rounded-xl border p-3.5 transition-all duration-200 flex flex-col justify-between ${
+                    isChecked
+                        ? 'bg-emerald-50/40 border-emerald-200/80'
+                        : 'bg-white border-stone-200 hover:border-forest-300 hover:shadow-sm'
+                }">
+                    <div class="flex items-start gap-3">
+                        <div class="pt-0.5">
+                            <input type="checkbox"
+                                id="check-${item.id}"
+                                ${isChecked ? 'checked' : ''}
+                                onchange="toggleItem('${item.id}')"
+                                class="checkbox-anim w-5 h-5 rounded text-forest-600 focus:ring-forest-500 border-stone-300 cursor-pointer accent-forest-600">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <label for="check-${item.id}" class="cursor-pointer select-none">
+                                <span class="text-xs font-mono font-bold text-stone-400 mr-1.5">#${item.num}</span>
+                                <span class="font-semibold text-sm sm:text-base text-stone-800 transition-all ${
+                                    isChecked ? 'line-through text-stone-400 font-normal' : ''
+                                }">
+                                    ${item.name}
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 pt-2.5 border-t border-stone-100/80 flex items-center justify-between gap-2">
+                        <a href="${item.videoUrl}" target="_blank" rel="noopener noreferrer"
+                            class="text-xs font-medium text-forest-700 hover:text-forest-900 bg-forest-50 hover:bg-forest-100 border border-forest-200/60 px-2.5 py-1.5 rounded-lg transition duration-150 flex items-center gap-1.5">
+                            <i class="fa-brands fa-youtube text-red-600"></i>
+                            <span>Ver Tutorial Video</span>
+                        </a>
+                        <a href="${item.videoUrl}" target="_blank" rel="noopener noreferrer"
+                            title="Abrir en YouTube pestaña nueva"
+                            class="text-stone-400 hover:text-stone-600 p-1 text-xs transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // TOGGLE ITEM COMPLETION
+        function toggleItem(id) {
+            if (completedItems[id]) {
+                delete completedItems[id];
+            } else {
+                completedItems[id] = true;
+            }
+            saveState();
+            updateDashboard();
+            renderChecklist();
+        }
+
+        // UPDATE PROGRESS BAR AND COUNTERS
+        function updateDashboard() {
+            let totalCount = 0;
+            let completedTotal = 0;
+
+            let catStats = {
+                nudos: { total: 0, completed: 0 },
+                amarres: { total: 0, completed: 0 },
+                asdeguia: { total: 0, completed: 0 }
+            };
+
+            DATA.forEach(sec => {
+                sec.items.forEach(item => {
+                    totalCount++;
+                    catStats[sec.categoryKey].total++;
+                    if (completedItems[item.id]) {
+                        completedTotal++;
+                        catStats[sec.categoryKey].completed++;
+                    }
+                });
+            });
+
+            const percent = totalCount > 0 ? Math.round((completedTotal / totalCount) * 100) : 0;
+
+            document.getElementById('progress-bar').style.width = `${percent}%`;
+            document.getElementById('progress-percentage').innerText = `${percent}%`;
+            document.getElementById('progress-status-text').innerText = `${completedTotal} de ${totalCount} Completados`;
+
+            document.getElementById('stat-nudos').innerText = `${catStats.nudos.completed}/${catStats.nudos.total}`;
+            document.getElementById('stat-amarres').innerText = `${catStats.amarres.completed}/${catStats.amarres.total}`;
+            document.getElementById('stat-asdeguia').innerText = `${catStats.asdeguia.completed}/${catStats.asdeguia.total}`;
+        }
+
+        // FILTER FUNCTIONS
+        function setCategoryFilter(category) {
+            currentCategoryFilter = category;
+
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.className = 'cat-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition bg-white text-stone-600 hover:bg-stone-200/60 border border-stone-200';
+            });
+
+            const activeBtn = document.getElementById(`cat-${category}`);
+            if (activeBtn) {
+                activeBtn.className = 'cat-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition bg-forest-800 text-white shadow-sm';
+            }
+
+            renderChecklist();
+        }
+
+        function setStatusFilter(status) {
+            currentStatusFilter = status;
+
+            document.querySelectorAll('.status-btn').forEach(btn => {
+                btn.className = 'status-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition text-stone-600 hover:text-stone-900';
+            });
+
+            const activeBtn = document.getElementById(`status-${status}`);
+            if (activeBtn) {
+                activeBtn.className = 'status-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-white text-stone-800 shadow-sm';
+            }
+
+            renderChecklist();
+        }
+
+        function filterItems() {
+            searchQuery = document.getElementById('search-input').value;
+            renderChecklist();
+        }
+
+        // RESET PROGRESS MODAL LOGIC
+        function confirmReset() {
+            document.getElementById('reset-modal').classList.remove('hidden');
+        }
+
+        function closeResetModal() {
+            document.getElementById('reset-modal').classList.add('hidden');
+        }
+
+        function executeReset() {
+            completedItems = {};
+            try {
+                localStorage.removeItem('knots_checklist_completed');
+            } catch (e) {}
+            updateDashboard();
+            renderChecklist();
+            closeResetModal();
+        }
+    </script>
+</body>
+</html>
